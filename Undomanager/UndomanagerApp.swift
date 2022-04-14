@@ -7,7 +7,10 @@ import SwiftUI
 struct UndomanagerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                ContentView()
+            }
+            .navigationViewStyle(.automatic)
         }
     }
 }

@@ -14,6 +14,12 @@
 		5040E46327EDAC3A007170A5 /* UndomanagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5040E46227EDAC3A007170A5 /* UndomanagerTests.swift */; };
 		5040E46D27EDAC3A007170A5 /* UndomanagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5040E46C27EDAC3A007170A5 /* UndomanagerUITests.swift */; };
 		5040E46F27EDAC3A007170A5 /* UndomanagerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5040E46E27EDAC3A007170A5 /* UndomanagerUITestsLaunchTests.swift */; };
+		5040E47D27EDADB8007170A5 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5040E47C27EDADB8007170A5 /* CellView.swift */; };
+		5040E48027EDAEBB007170A5 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5040E47F27EDAEBB007170A5 /* Student.swift */; };
+		5040E48527EDB160007170A5 /* UndoRedoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5040E48427EDB160007170A5 /* UndoRedoView.swift */; };
+		5040E48827EDBB49007170A5 /* UndoRedoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5040E48727EDBB49007170A5 /* UndoRedoViewModel.swift */; };
+		5090D24F280821DF003A913F /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5090D24E280821DF003A913F /* Stack.swift */; };
+		5090D2512808230B003A913F /* UndoRedoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5090D2502808230B003A913F /* UndoRedoManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +50,13 @@
 		5040E46827EDAC3A007170A5 /* UndomanagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UndomanagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5040E46C27EDAC3A007170A5 /* UndomanagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UndomanagerUITests.swift; sourceTree = "<group>"; };
 		5040E46E27EDAC3A007170A5 /* UndomanagerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UndomanagerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5040E47C27EDADB8007170A5 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+		5040E47F27EDAEBB007170A5 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		5040E48427EDB160007170A5 /* UndoRedoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UndoRedoView.swift; sourceTree = "<group>"; };
+		5040E48727EDBB49007170A5 /* UndoRedoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UndoRedoViewModel.swift; sourceTree = "<group>"; };
+		5090D24E280821DF003A913F /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		5090D2502808230B003A913F /* UndoRedoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UndoRedoManager.swift; sourceTree = "<group>"; };
+		5090D25228082C5D003A913F /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +87,7 @@
 		5040E44527EDAC35007170A5 = {
 			isa = PBXGroup;
 			children = (
+				5090D25228082C5D003A913F /* Readme.md */,
 				5040E45027EDAC35007170A5 /* Undomanager */,
 				5040E46127EDAC3A007170A5 /* UndomanagerTests */,
 				5040E46B27EDAC3A007170A5 /* UndomanagerUITests */,
@@ -94,8 +108,10 @@
 		5040E45027EDAC35007170A5 /* Undomanager */ = {
 			isa = PBXGroup;
 			children = (
+				5040E48627EDB84B007170A5 /* Manager */,
+				5040E47E27EDAEA6007170A5 /* Models */,
+				5040E47B27EDAD2A007170A5 /* Modules */,
 				5040E45127EDAC35007170A5 /* UndomanagerApp.swift */,
-				5040E45327EDAC35007170A5 /* ContentView.swift */,
 				5040E45527EDAC3A007170A5 /* Assets.xcassets */,
 				5040E45727EDAC3A007170A5 /* Preview Content */,
 			);
@@ -125,6 +141,50 @@
 				5040E46E27EDAC3A007170A5 /* UndomanagerUITestsLaunchTests.swift */,
 			);
 			path = UndomanagerUITests;
+			sourceTree = "<group>";
+		};
+		5040E47B27EDAD2A007170A5 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				5040E48227EDAF0A007170A5 /* DefaultUndo */,
+				5040E48127EDAEF1007170A5 /* Main */,
+				5040E47C27EDADB8007170A5 /* CellView.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		5040E47E27EDAEA6007170A5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5040E47F27EDAEBB007170A5 /* Student.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5040E48127EDAEF1007170A5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5040E45327EDAC35007170A5 /* ContentView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		5040E48227EDAF0A007170A5 /* DefaultUndo */ = {
+			isa = PBXGroup;
+			children = (
+				5040E48427EDB160007170A5 /* UndoRedoView.swift */,
+				5040E48727EDBB49007170A5 /* UndoRedoViewModel.swift */,
+			);
+			path = DefaultUndo;
+			sourceTree = "<group>";
+		};
+		5040E48627EDB84B007170A5 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				5090D24E280821DF003A913F /* Stack.swift */,
+				5090D2502808230B003A913F /* UndoRedoManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +317,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5040E48827EDBB49007170A5 /* UndoRedoViewModel.swift in Sources */,
+				5090D24F280821DF003A913F /* Stack.swift in Sources */,
 				5040E45427EDAC35007170A5 /* ContentView.swift in Sources */,
 				5040E45227EDAC35007170A5 /* UndomanagerApp.swift in Sources */,
+				5040E47D27EDADB8007170A5 /* CellView.swift in Sources */,
+				5090D2512808230B003A913F /* UndoRedoManager.swift in Sources */,
+				5040E48027EDAEBB007170A5 /* Student.swift in Sources */,
+				5040E48527EDB160007170A5 /* UndoRedoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
